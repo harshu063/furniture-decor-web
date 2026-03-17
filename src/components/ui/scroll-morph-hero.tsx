@@ -187,7 +187,7 @@ export default function IntroAnimation() {
                     animate={{ opacity: contentOpacity, y: showContent ? 0 : 16 }}
                     initial={{ opacity: 0, y: 16 }}
                     transition={{ duration: 0.7 }}
-                    className="absolute top-[8%] z-10 flex flex-col items-center justify-center text-center pointer-events-none px-4 w-full"
+                    className="absolute top-[6%] z-10 flex flex-col items-center justify-center text-center pointer-events-none px-4 w-full"
                 >
                     <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-[#202e44] tracking-tight mb-3">
                         Maa Ashapura Furniture
@@ -223,17 +223,20 @@ export default function IntroAnimation() {
                                 rotation: circleAngle + 90,
                             };
 
-                            const baseRadius = Math.min(containerSize.width, containerSize.height * 1.5);
-                            const arcRadius = baseRadius * (isMobile ? 1.2 : 1.1);
-                            const arcApexY = containerSize.height * (isMobile ? 0.38 : 0.28);
+                            // Mobile: compact arc that fits within the visible hero height
+                            const arcRadius = isMobile
+                                ? containerSize.width * 0.48
+                                : Math.min(containerSize.width, containerSize.height * 1.5) * 1.1;
+                            // arcApexY = distance below center for the arc's topmost point
+                            const arcApexY = containerSize.height * (isMobile ? 0.04 : 0.28);
                             const arcCenterY = arcApexY + arcRadius;
-                            const spreadAngle = isMobile ? 90 : 125;
+                            const spreadAngle = isMobile ? 105 : 125;
                             const startAngle = -90 - spreadAngle / 2;
                             const step = spreadAngle / (TOTAL_IMAGES - 1);
                             const currentArcAngle = startAngle + i * step;
                             const aRad = (currentArcAngle * Math.PI) / 180;
 
-                            const arcScale = isMobile ? 0.85 : 1.7;
+                            const arcScale = isMobile ? 0.72 : 1.7;
                             const arcPos = {
                                 x: Math.cos(aRad) * arcRadius + parallaxValue,
                                 y: Math.sin(aRad) * arcRadius + arcCenterY,

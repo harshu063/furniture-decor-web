@@ -103,7 +103,7 @@ const Navbar1 = () => {
           >
             <Sofa className="w-5 h-5 text-white" />
           </motion.div>
-          <div className="hidden sm:block">
+          <div>
             <p className="text-[13px] font-bold text-[#202e44] leading-tight">Maa Ashapura</p>
             <p className="text-[10px] text-[#88734C] font-medium tracking-wider uppercase leading-tight">Furniture</p>
           </div>
