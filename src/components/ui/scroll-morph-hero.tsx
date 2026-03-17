@@ -170,7 +170,8 @@ export default function IntroAnimation() {
                         transition={{ duration: 0.8 }}
                         className="text-2xl font-semibold tracking-tight text-[#202e44] md:text-4xl px-4"
                     >
-                        Furniture That Lasts a Lifetime.
+                        Crafted in Rajasthan.{" "}
+                        <span className="text-[#88734C]">Built for Generations.</span>
                     </motion.h1>
                     <motion.p
                         animate={{ opacity: taglineOpacity * 0.7 }}
@@ -193,9 +194,9 @@ export default function IntroAnimation() {
                         Maa Ashapura Furniture
                     </h2>
                     <p className="text-sm md:text-base text-[#202e44]/70 max-w-md leading-relaxed">
-                        Premium handcrafted furniture in teak, sheesham & mango wood.
+                        Premium handcrafted teak, sheesham & mango wood furniture —
                         <br className="hidden md:block" />
-                        Every piece built with passion, precision, and timeless design.
+                        direct from our workshop in Sojat Road, Rajasthan.
                     </p>
                 </motion.div>
 

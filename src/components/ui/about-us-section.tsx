@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect, useRef } from "react"
+import { Link } from "react-router-dom"
 import {
   Pen,
   PaintBucket,
@@ -69,58 +70,58 @@ export default function AboutUsSection() {
     {
       icon: <Pen className="w-6 h-6" />,
       secondaryIcon: <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-[#88734C]/60" />,
-      title: "Custom Design",
+      title: "Bespoke Custom Furniture",
       description:
-        "Every piece starts with your vision. Our craftsmen work closely with you to design bespoke furniture tailored to your space, taste, and lifestyle — from sketch to final piece.",
+        "Your home has its own story — your furniture should tell it. We craft pieces precisely to your space, style, and budget. Every dimension, finish, and carving detail is yours to choose.",
       position: "left",
     },
     {
       icon: <Home className="w-6 h-6" />,
       secondaryIcon: <CheckCircle className="w-4 h-4 absolute -top-1 -right-1 text-[#88734C]/60" />,
-      title: "Bedroom Furniture",
+      title: "Bedroom Sets & Wardrobes",
       description:
-        "Complete bedroom sets crafted in premium teak and sheesham wood — king beds, carved wardrobes, dressers and side tables built with traditional joinery techniques.",
+        "Complete bedroom suites in Grade A teak and sheesham — king beds with hand-carved headboards, spacious wardrobes, dressers, and bedside tables with traditional mortise-and-tenon joinery.",
       position: "left",
     },
     {
       icon: <PenTool className="w-6 h-6" />,
       secondaryIcon: <Star className="w-4 h-4 absolute -top-1 -right-1 text-[#88734C]/60" />,
-      title: "Living Room Sets",
+      title: "Living Room Furniture",
       description:
-        "Handcrafted sofa sets, center tables, TV units and display shelves in rich wood finishes. We blend contemporary aesthetics with traditional Rajasthani craftsmanship.",
+        "Handcrafted sofa frames, centre tables, TV units, and display shelves in rich wood finishes — blending clean contemporary aesthetics with authentic Rajasthani craft. Warm and unmistakably solid.",
       position: "left",
     },
     {
       icon: <PaintBucket className="w-6 h-6" />,
       secondaryIcon: <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-[#88734C]/60" />,
-      title: "Wooden Décor",
+      title: "Wooden Handicrafts & Décor",
       description:
-        "Our artisans handcraft decorative wooden pieces — carved wall panels, hand-painted almirahs, wooden frames and bespoke art objects that elevate any interior.",
+        "Carved wall panels, jhoola swings, hand-painted almirahs, and bespoke art objects rooted in Rajasthani tradition — pieces that make a room complete rather than merely furnished.",
       position: "right",
     },
     {
       icon: <Ruler className="w-6 h-6" />,
       secondaryIcon: <CheckCircle className="w-4 h-4 absolute -top-1 -right-1 text-[#88734C]/60" />,
-      title: "Office Furniture",
+      title: "Office & Commercial Furniture",
       description:
-        "Professional, ergonomic office desks, executive chairs, conference tables and modular storage — built to withstand daily use while maintaining an elegant workspace.",
+        "Solid wood in a workspace sends a clear message: permanence and quality. Conference tables, executive desks, reception counters — built for daily use while retaining warmth and character.",
       position: "right",
     },
     {
       icon: <Building2 className="w-6 h-6" />,
       secondaryIcon: <Star className="w-4 h-4 absolute -top-1 -right-1 text-[#88734C]/60" />,
-      title: "Commercial Projects",
+      title: "Hotel & Hospitality Projects",
       description:
-        "From hotel lobbies to restaurant dining sets and retail showrooms — we deliver large-scale custom furniture installations on time, every time, without compromise.",
+        "Hospitality furniture must be beautiful, durable, and consistent. We've furnished heritage havelis, boutique resorts, and business hotels — guest room sets, lobbies, dining areas, and spa interiors.",
       position: "right",
     },
   ]
 
   const stats = [
-    { icon: <Award />, value: 1200, label: "Projects Completed", suffix: "+" },
+    { icon: <Award />, value: 1200, label: "Projects Delivered", suffix: "+" },
     { icon: <Users />, value: 500, label: "Happy Clients", suffix: "+" },
     { icon: <Calendar />, value: 15, label: "Years of Craft", suffix: "+" },
-    { icon: <TrendingUp />, value: 98, label: "Satisfaction Rate", suffix: "%" },
+    { icon: <TrendingUp />, value: 18, label: "States Served", suffix: "+" },
   ]
 
   return (
@@ -174,9 +175,10 @@ export default function AboutUsSection() {
         </motion.div>
 
         <motion.p className="text-center max-w-2xl mx-auto mb-8 md:mb-16 text-[#202e44]/80" variants={itemVariants}>
-          Maa Ashapura Furniture is a heritage furniture workshop rooted in Rajasthan's rich craft tradition. For over 15
-          years, our master craftsmen have handcrafted premium teak, sheesham, and mango wood furniture — combining
-          traditional joinery techniques with modern design to create pieces that stand the test of time.
+          Maa Ashapura Furniture was born in a single craftsman's workshop in Sojat Road, Rajasthan — a small town with
+          an outsized legacy of artisanal skill. For over 15 years, our family-run atelier has turned Grade A teak,
+          sheesham, and mango wood into furniture built for generations, using mortise-and-tenon joinery and hand-applied
+          finishes. No MDF. No veneer. No shortcuts. One piece, one craftsman, one standard.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
@@ -305,16 +307,17 @@ export default function AboutUsSection() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <div className="flex-1">
-            <h3 className="text-2xl font-medium mb-2">Ready to furnish your dream space?</h3>
-            <p className="text-white/80">Get a free consultation and custom quote from our master craftsmen.</p>
+            <h3 className="text-2xl font-medium mb-2">Not furniture you buy. Furniture you inherit.</h3>
+            <p className="text-white/80">Get a free consultation and custom quote — direct from our workshop, no middlemen, no markups.</p>
           </div>
-          <motion.button
-            className="bg-[#88734C] hover:bg-[#88734C]/90 text-white px-6 py-3 rounded-lg flex items-center gap-2 font-medium transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get Started <ArrowRight className="w-4 h-4" />
-          </motion.button>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              to="/contact"
+              className="bg-[#88734C] hover:bg-[#88734C]/90 text-white px-6 py-3 rounded-lg inline-flex items-center gap-2 font-medium transition-colors"
+            >
+              Get Started <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>

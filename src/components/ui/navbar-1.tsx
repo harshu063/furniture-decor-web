@@ -91,6 +91,7 @@ const Navbar1 = () => {
   const isActive = (path: string) => location.pathname === path
 
   return (
+    <>
     <div className="w-full fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#202e44]/10 shadow-sm" ref={navRef}>
       <div className="flex items-center justify-between h-16 px-4 md:px-8 max-w-7xl mx-auto relative z-10">
 
@@ -252,11 +253,13 @@ const Navbar1 = () => {
         </motion.button>
       </div>
 
-      {/* Mobile Menu */}
+    </div>
+
+      {/* Mobile Menu — rendered outside the backdrop-blur wrapper to avoid containing-block issues */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-white z-50 overflow-y-auto md:hidden"
+            className="fixed inset-0 bg-white z-[60] overflow-y-auto md:hidden"
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
@@ -378,7 +381,7 @@ const Navbar1 = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   )
 }
 

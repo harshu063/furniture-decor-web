@@ -16,49 +16,48 @@ interface Feature72Props {
   features?: Feature[];
 }
 
-// Using img-08 through img-13 — distinct from Gallery (img-14–21) and About (img-01)
 const furnitureServices: Feature[] = [
   {
     id: "custom-furniture",
-    title: "Custom Furniture Design",
-    description: "Every piece starts with your vision. Our craftsmen work closely with you to design bespoke furniture tailored to your space, taste, and lifestyle — from sketch to final piece in premium teak, sheesham, or mango wood.",
+    title: "Bespoke Custom Furniture",
+    description: "Your home has its own story — your furniture should tell it. We craft pieces precisely to your space, style, and budget, with every dimension, finish, and carving detail yours to choose in Grade A teak, sheesham, or mango wood. No catalogue sizes, no compromises.",
     image: "/images/img-08.jpeg",
   },
   {
     id: "bedroom-sets",
-    title: "Bedroom Sets",
-    description: "Complete bedroom sets in premium teak and sheesham — king beds with carved headboards, spacious wardrobes with premium fittings, matching dressers, bedside tables, and custom storage solutions.",
+    title: "Bedroom Sets & Wardrobes",
+    description: "Complete bedroom suites built with traditional mortise-and-tenon joinery — king beds with hand-carved headboards, spacious wardrobes with premium brass fittings, matching dressers, and bedside tables. Furniture you will still be proud of in 30 years.",
     image: "/images/img-09.jpeg",
   },
   {
     id: "living-room",
     title: "Living Room Furniture",
-    description: "Handcrafted sofa sets, centre tables, TV units, and display shelves in rich wood finishes. We blend contemporary aesthetics with traditional Rajasthani craftsmanship for your living space.",
+    description: "Handcrafted sofa frames, centre tables, TV units, and display shelves that blend clean contemporary aesthetics with authentic Rajasthani craft. Warm, refined, and unmistakably solid wood — never a veneer in sight.",
     image: "/images/img-10.jpeg",
   },
   {
     id: "office-furniture",
     title: "Office & Commercial Furniture",
-    description: "Professional, ergonomic office desks, executive chairs, conference tables, and modular storage — built for daily use while maintaining an elegant, productive workspace.",
+    description: "Solid wood in a workspace sends a clear message: permanence and quality. We manufacture conference tables, executive desks, reception counters, and modular storage for corporate offices and co-working spaces — built for daily use while retaining their warmth.",
     image: "/images/img-11.jpeg",
   },
   {
     id: "kitchen-cabinets",
     title: "Kitchen Cabinets & Modular Interiors",
-    description: "Modular kitchen cabinets, overhead storage, pantry organisers, and countertops crafted to maximise space efficiency while adding warmth and elegance to your kitchen.",
+    description: "Modular kitchen cabinets, overhead storage, pantry organisers, and countertop frameworks in solid wood and quality ply. We maximise your kitchen's efficiency while adding the warmth that no laminate sheet will ever replicate.",
     image: "/images/img-12.jpeg",
   },
   {
     id: "wooden-decor",
     title: "Wooden Handicrafts & Décor",
-    description: "Our artisans handcraft premium wooden décor — carved wall panels, decorative shelves, door panels, hand-painted almirahs, and bespoke art pieces that define your interior.",
+    description: "Carved wall panels, jhoola swings, hand-painted almirahs, door panels, and bespoke art objects rooted in Rajasthani tradition. Pieces that make a room complete rather than merely furnished — each one a conversation starter.",
     image: "/images/img-13.jpeg",
   },
 ];
 
 export const Feature72 = ({
   heading = "Our Services",
-  description = "At Maa Ashapura Furniture, we offer a comprehensive range of furniture crafting and interior solutions. Every piece is made with superior wood, skilled craftsmanship, and careful attention to detail — built to last generations.",
+  description = "Every service is delivered with Grade A solid wood, skilled Rajasthani craftsmanship, and a no-middleman promise. We don't make furniture in batches — we make it the right way, one piece at a time, built to outlast trends and pass between generations.",
   linkUrl = "/contact",
   linkText = "Get a Free Quote",
   features = furnitureServices,

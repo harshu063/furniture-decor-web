@@ -1,5 +1,6 @@
 import IntroAnimation from "@/components/ui/scroll-morph-hero"
 import AboutUsSection from "@/components/ui/about-us-section"
+import TestimonialsSection from "@/components/ui/testimonials-section"
 import { Footerdemo } from "@/components/ui/footer-section"
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <IntroAnimation />
       </section>
       <AboutUsSection />
+      <TestimonialsSection />
       <Footerdemo />
     </>
   )

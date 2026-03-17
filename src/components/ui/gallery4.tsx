@@ -19,69 +19,68 @@ export interface Gallery4Props {
   items?: Gallery4Item[];
 }
 
-// Using img-14 through img-21 — distinct from the Services section (img-02–07) and About (img-01)
 const furnitureProjects: Gallery4Item[] = [
   {
     id: "project-1",
-    title: "Luxury Villa — Complete Interior",
-    description: "Full furniture setup for a 5BHK luxury villa: custom beds, wardrobes, sofa sets, dining tables and handcrafted wooden décor across all rooms.",
+    title: "Heritage Haveli Hotel — Suite Collection, Jaisalmer",
+    description: "48 hand-carved teak four-poster beds with jali headboards, brass-inlay wardrobes, and custom dining sets for a 24-room boutique hotel. Delivered and installed over 8 weeks.",
     href: "#",
     image: "/images/img-14.jpeg",
   },
   {
     id: "project-2",
-    title: "Hotel Suites — Premium Hospitality",
-    description: "Custom furniture for 30 hotel suites featuring king-size beds with upholstered headboards, bedside tables, TV units and lounge chairs in rich teakwood finish.",
+    title: "Tech Firm HQ — Executive Interiors, Gurgaon",
+    description: "Custom sheesham workstations, conference tables, and reception counter for a 120-seat corporate campus. 240+ pieces delivered across 3 floors in 10 weeks.",
     href: "#",
     image: "/images/img-15.jpeg",
   },
   {
     id: "project-3",
-    title: "Corporate Office — Modern Workspace",
-    description: "Ergonomic office furniture for a 60-seat corporate office including executive desks, conference tables, reception counter, and modular storage units.",
+    title: "Lakeside Private Villa — Collector's Home, Udaipur",
+    description: "End-to-end furnishing for a 6,000 sq.ft. residence: 14-seater carved teak dining suite, hand-painted bedroom sets for 4 rooms, and a floor-to-ceiling sheesham home library.",
     href: "#",
     image: "/images/img-16.jpeg",
   },
   {
     id: "project-4",
-    title: "Restaurant — Dining & Bar Furniture",
-    description: "Bespoke dining chairs, wooden tables, bar stools, and counter furniture crafted for a premium restaurant with rustic-modern aesthetics.",
+    title: "Rajasthani Fine Dining Restaurant — Bandra, Mumbai",
+    description: "60-cover restaurant interior with carved sheesham dining chairs, hand-blocked fabric seats, teak bar counter with brass fittings, and Marwari motif wall panel installations.",
     href: "#",
     image: "/images/img-17.jpeg",
   },
   {
     id: "project-5",
-    title: "Residential Apartment — 3BHK Setup",
-    description: "Complete furniture for a contemporary 3BHK apartment — living room, master bedroom, kids room, and kitchen cabinets in minimalist design.",
+    title: "Premium Apartment Complex — Builder Package, Jaipur",
+    description: "Full furniture packages across 36 premium 3BHK apartments — bedroom, living, and dining sets in mango and sheesham wood, on a phased construction-aligned delivery schedule.",
     href: "#",
     image: "/images/img-18.jpeg",
   },
   {
     id: "project-6",
-    title: "Boutique Showroom — Display Units",
-    description: "Custom display cabinets, counters, shelving units and storage solutions for a premium boutique showroom with glass and wood finishes.",
+    title: "Eco-Resort — Wilderness Retreat, Jim Corbett",
+    description: "Nature-inspired teak bed frames with woven cane panels, mango wood lounge chairs, and a 30-cover outdoor dining set for a 16-cottage resort, finished in natural Danish oil.",
     href: "#",
     image: "/images/img-19.jpeg",
   },
   {
     id: "project-7",
-    title: "Heritage Bungalow — Classic Interiors",
-    description: "Restoration and custom fabrication of classic wooden furniture: carved beds, antique-style almirahs, and chaise lounges for a heritage bungalow.",
+    title: "Ethnic Wear Boutique — Retail Interiors, Khan Market, Delhi",
+    description: "Custom reclaimed teak display shelving, carved trial room doors, and a handcrafted checkout counter for a premium boutique — evoking a curated Rajasthani haveli atmosphere.",
     href: "#",
     image: "/images/img-20.jpeg",
   },
   {
     id: "project-8",
-    title: "Children's Bedroom — Playful Designs",
-    description: "Safe, durable furniture for a kids' bedroom — bunk beds, study tables, toy storage and colourful wardrobes crafted with child safety in mind.",
+    title: "NRI Home — Export Delivery, Toronto, Canada",
+    description: "A complete sheesham bedroom set, carved console table, and traditional takhat with storage — crafted, ISPM-15 certified, and shipped to a Rajasthani family's home in Canada.",
     href: "#",
     image: "/images/img-21.jpeg",
   },
 ];
 
 const Gallery4 = ({
-  title = "Our Projects",
-  description = "From luxurious residences to grand hospitality spaces, each project reflects our commitment to quality craftsmanship, premium materials, and timeless design.",
+  title = "Completed Projects",
+  description = "From heritage hotels in Jaisalmer to corporate campuses in Gurgaon — each project is a testament to craft that outlasts trends. Residential, hospitality, commercial, and export work across 18+ states.",
   items = furnitureProjects,
 }: Gallery4Props) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
