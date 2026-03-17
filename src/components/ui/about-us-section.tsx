@@ -207,7 +207,7 @@ export default function AboutUsSection() {
                 whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
               >
                 <img
-                  src="/images/img-07.jpeg"
+                  src="/images/img-18.jpeg"
                   alt="Maa Ashapura Furniture Workshop"
                   className="w-full h-full object-cover"
                 />
@@ -217,13 +217,13 @@ export default function AboutUsSection() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.9 }}
                 >
-                  <motion.button
+                  {/* <motion.button
                     className="bg-white text-[#202e44] px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     Our Portfolio <ArrowRight className="w-4 h-4" />
-                  </motion.button>
+                  </motion.button> */}
                 </motion.div>
               </motion.div>
               <motion.div

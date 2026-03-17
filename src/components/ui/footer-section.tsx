@@ -4,26 +4,15 @@ import * as React from "react"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Switch } from "@/components/ui/switch"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Facebook, Instagram, Linkedin, Moon, Send, Sun, Twitter, Sofa } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Send, Twitter, Sofa } from "lucide-react"
 
 function Footerdemo() {
-  const [isDarkMode, setIsDarkMode] = React.useState(false)
-
-  React.useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  }, [isDarkMode])
 
   return (
     <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
@@ -74,8 +63,8 @@ function Footerdemo() {
                   if (el) {
                     el.scrollIntoView({ behavior: "smooth" });
                   } else {
-                    window.location.hash = "/";
-                    setTimeout(() => document.getElementById("about-section")?.scrollIntoView({ behavior: "smooth" }), 150);
+                    window.location.href = "/";
+                    setTimeout(() => document.getElementById("about-section")?.scrollIntoView({ behavior: "smooth" }), 300);
                   }
                 }}
                 className="block text-left w-full transition-colors hover:text-[#88734C]"
@@ -90,10 +79,11 @@ function Footerdemo() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
             <address className="space-y-2 text-sm not-italic text-muted-foreground">
-              <p className="font-medium text-foreground">Maa Ashapura Furniture</p>
-              <p>Furniture Market, Jodhpur</p>
-              <p>Rajasthan — 342001</p>
-              <p>Phone: <a href="tel:+919876543210" className="hover:text-[#88734C]">+91 98765 43210</a></p>
+              <p className="font-medium text-foreground">Heera Lal — Owner</p>
+              <p>Char Bhuja Mandir, Musaliya</p>
+              <p>Sojat Road, Rajasthan — 306103</p>
+              <p>Phone: <a href="tel:+919928859926" className="hover:text-[#88734C]">+91 99288 59926</a></p>
+              <p>Phone: <a href="tel:+918239209231" className="hover:text-[#88734C]">+91 82392 09231</a></p>
               <p>Email: <a href="mailto:maaashapurafurniture@gmail.com" className="hover:text-[#88734C]">maaashapurafurniture@gmail.com</a></p>
             </address>
           </div>
@@ -146,16 +136,6 @@ function Footerdemo() {
                   <TooltipContent><p>Connect on LinkedIn</p></TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Sun className="h-4 w-4" />
-              <Switch
-                id="dark-mode"
-                checked={isDarkMode}
-                onCheckedChange={setIsDarkMode}
-              />
-              <Moon className="h-4 w-4" />
-              <Label htmlFor="dark-mode" className="sr-only">Toggle dark mode</Label>
             </div>
           </div>
         </div>

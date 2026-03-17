@@ -31,8 +31,8 @@ const contactMethods = [
     icon: Phone,
     title: "Call Us",
     description: "Speak directly with our team",
-    value: "+91 98765 43210",
-    link: "tel:+919876543210",
+    value: "+91 99288 59926 / +91 82392 09231",
+    link: "tel:+919928859926",
     gradient: "from-[#202e44]/20 to-[#88734C]/20",
     hoverColor: "green"
   },
@@ -40,7 +40,7 @@ const contactMethods = [
     icon: MapPin,
     title: "Visit Our Workshop",
     description: "See our craftsmanship in person",
-    value: "Furniture Market, Jodhpur, Rajasthan",
+    value: "Char Bhuja Mandir, Musaliya, Sojat Road, Rajasthan 306103",
     link: "#",
     gradient: "from-[#88734C]/20 to-[#202e44]/20",
     hoverColor: "orange"
@@ -88,7 +88,14 @@ export function PremiumContact() {
     e.preventDefault();
     if (!validateForm()) return;
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    const text = `Hello! I found you through your website and would like to inquire about furniture.
+
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Project Type:* ${formData.company || 'Not specified'}
+*Message:* ${formData.message}`;
+    const whatsappUrl = `https://wa.me/919928859926?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, '_blank');
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
@@ -182,14 +189,14 @@ export function PremiumContact() {
               variants={fadeInUp}
             >
               <motion.div
-                className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#88734C]/20 to-[#c4a97a]/10 border border-white/20 flex items-center justify-center mx-auto mb-3"
+                className="w-8 h-8 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gradient-to-br from-[#88734C]/20 to-[#c4a97a]/10 border border-white/20 flex items-center justify-center mx-auto mb-2 md:mb-3"
                 whileHover={{ rotateY: 180 }}
                 transition={{ duration: 0.6 }}
               >
-                <stat.icon className="w-6 h-6 text-[#c4a97a]" />
+                <stat.icon className="w-4 h-4 md:w-6 md:h-6 text-[#c4a97a]" />
               </motion.div>
-              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-white/60 text-sm">{stat.label}</div>
+              <div className="text-xl md:text-2xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-white/60 text-xs md:text-sm">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -292,7 +299,7 @@ export function PremiumContact() {
                     <CheckCircle className="w-10 h-10 text-green-400" />
                   </motion.div>
                   <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
-                  <p className="text-white/60 text-lg mb-6">Thank you for contacting Maa Ashapura Furniture. We'll reach out within 4 hours.</p>
+                  <p className="text-white/60 text-base mb-6">Thank you for contacting Maa Ashapura Furniture. We'll reach out within 4 hours.</p>
                   <motion.button
                     onClick={() => { setIsSubmitted(false); setFormData({ name: '', email: '', company: '', message: '' }); }}
                     className="px-6 py-3 bg-white/[0.08] border border-white/[0.15] rounded-xl text-white hover:bg-white/[0.12] transition-all"

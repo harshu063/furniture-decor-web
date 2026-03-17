@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { useState, useEffect, useRef } from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { motion, AnimatePresence } from "motion/react"
 import { Menu, X, ChevronDown, ArrowRight, Sofa, Building2, Ruler, PaintBucket, Pen, Home } from "lucide-react"
 
@@ -58,6 +58,7 @@ const Navbar1 = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
   const location = useLocation()
+  const navigate = useNavigate()
   const navRef = useRef<HTMLDivElement>(null)
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -90,8 +91,8 @@ const Navbar1 = () => {
   const isActive = (path: string) => location.pathname === path
 
   return (
-    <div className="flex justify-center w-full py-4 px-4 sticky top-0 z-50" ref={navRef}>
-      <div className="flex items-center justify-between px-5 py-3 bg-white/95 backdrop-blur-md rounded-2xl shadow-lg w-full max-w-5xl relative z-10 border border-[#202e44]/10">
+    <div className="w-full fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#202e44]/10 shadow-sm" ref={navRef}>
+      <div className="flex items-center justify-between h-16 px-4 md:px-8 max-w-7xl mx-auto relative z-10">
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 shrink-0">
@@ -211,7 +212,7 @@ const Navbar1 = () => {
               if (el) {
                 el.scrollIntoView({ behavior: "smooth" });
               } else {
-                window.location.hash = "/";
+                navigate("/");
                 setTimeout(() => document.getElementById("about-section")?.scrollIntoView({ behavior: "smooth" }), 150);
               }
             }}
@@ -357,7 +358,7 @@ const Navbar1 = () => {
                   if (el) {
                     el.scrollIntoView({ behavior: "smooth" });
                   } else {
-                    window.location.hash = "/";
+                    navigate("/");
                     setTimeout(() => document.getElementById("about-section")?.scrollIntoView({ behavior: "smooth" }), 150);
                   }
                 }}
