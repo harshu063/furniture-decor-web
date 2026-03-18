@@ -33,7 +33,8 @@ function Footerdemo() {
             <p className="mb-6 text-sm text-muted-foreground leading-relaxed">
               Direct from our workshop in Sojat Road, Rajasthan. 15+ years of heritage craftsmanship in teak, sheesham & mango wood. No middlemen. No MDF. No shortcuts.
             </p>
-            <h3 className="mb-3 text-base font-semibold">Stay Updated</h3>
+            <h3 className="mb-1 text-base font-semibold">From Our Workshop</h3>
+            <p className="mb-3 text-xs text-muted-foreground leading-relaxed">New projects, craft guides & stories from Sojat Road — straight to your inbox.</p>
             <form className="relative">
               <Input
                 type="email"

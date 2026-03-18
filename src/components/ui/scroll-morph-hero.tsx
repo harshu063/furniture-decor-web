@@ -6,6 +6,15 @@ import { motion } from "framer-motion";
 // --- Types ---
 export type AnimationPhase = "scatter" | "line" | "circle" | "bottom-strip";
 
+const CARD_CATEGORIES = [
+    { label: "Bedroom Collections", desc: "Teak beds & wardrobes" },
+    { label: "Living Room Sets", desc: "Sofa frames & tables" },
+    { label: "Bespoke Custom Orders", desc: "Your dimensions. Your finish." },
+    { label: "Hospitality Projects", desc: "Hotels & boutique resorts" },
+    { label: "Wooden Handicrafts", desc: "Carved panels & art objects" },
+    { label: "Office Furniture", desc: "Desks & conference tables" },
+];
+
 interface FlipCardProps {
     src: string;
     index: number;
@@ -55,12 +64,12 @@ function FlipCard({ src, index, target }: FlipCardProps) {
 
                 {/* Back Face */}
                 <div
-                    className="absolute inset-0 h-full w-full overflow-hidden rounded-xl shadow-lg bg-[#202e44] flex flex-col items-center justify-center p-4 border border-[#202e44]/50"
+                    className="absolute inset-0 h-full w-full overflow-hidden rounded-xl shadow-lg bg-[#202e44] flex flex-col items-center justify-center p-3 border border-[#c4a97a]/20"
                     style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
                 >
                     <div className="text-center">
-                        <p className="text-[8px] font-bold text-[#c4a97a] uppercase tracking-widest mb-1">View</p>
-                        <p className="text-xs font-medium text-white">Details</p>
+                        <p className="text-[7px] font-bold text-[#c4a97a] uppercase tracking-widest mb-1">{CARD_CATEGORIES[index % CARD_CATEGORIES.length].label}</p>
+                        <p className="text-[8px] text-white/70 leading-tight">{CARD_CATEGORIES[index % CARD_CATEGORIES.length].desc}</p>
                     </div>
                 </div>
             </motion.div>

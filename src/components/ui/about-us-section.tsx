@@ -175,10 +175,10 @@ export default function AboutUsSection() {
         </motion.div>
 
         <motion.p className="text-center max-w-2xl mx-auto mb-8 md:mb-16 text-[#202e44]/80" variants={itemVariants}>
-          Maa Ashapura Furniture was born in a single craftsman's workshop in Sojat Road, Rajasthan — a small town with
-          an outsized legacy of artisanal skill. For over 15 years, our family-run atelier has turned Grade A teak,
-          sheesham, and mango wood into furniture built for generations, using mortise-and-tenon joinery and hand-applied
-          finishes. No MDF. No veneer. No shortcuts. One piece, one craftsman, one standard.
+          Maa Ashapura Furniture was born in a single craftsman's workshop in Sojat Road, Rajasthan, and has stayed one
+          ever since. For over 15 years, we've turned Grade A teak, sheesham, and mango wood into furniture built to
+          outlast trends — using traditional mortise-and-tenon joinery, hand-applied finishes, and no shortcuts.
+          No MDF. No veneer. One piece, one craftsman, one standard.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">

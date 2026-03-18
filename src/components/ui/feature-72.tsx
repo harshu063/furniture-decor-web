@@ -56,8 +56,8 @@ const furnitureServices: Feature[] = [
 ];
 
 export const Feature72 = ({
-  heading = "Our Services",
-  description = "Every service is delivered with Grade A solid wood, skilled Rajasthani craftsmanship, and a no-middleman promise. We don't make furniture in batches — we make it the right way, one piece at a time, built to outlast trends and pass between generations.",
+  heading = "Crafted for Every Space",
+  description = "Every piece is made to order in our Sojat Road workshop — Grade A solid wood, traditional joinery, no middlemen. We don't do batches or shortcuts. One commission, one craftsman, one standard.",
   linkUrl = "/contact",
   linkText = "Get a Free Quote",
   features = furnitureServices,
@@ -67,7 +67,7 @@ export const Feature72 = ({
       <div className="container mx-auto px-4 max-w-6xl flex flex-col gap-14">
         {/* Section header */}
         <div className="max-w-lg">
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#88734C] block mb-3">What We Offer</span>
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#88734C] block mb-3">Our Specialties</span>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#202e44] mb-4">{heading}</h2>
           <p className="text-base text-[#202e44]/70 leading-relaxed mb-6">{description}</p>
           <Link

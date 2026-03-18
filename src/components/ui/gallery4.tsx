@@ -79,7 +79,7 @@ const furnitureProjects: Gallery4Item[] = [
 ];
 
 const Gallery4 = ({
-  title = "Completed Projects",
+  title = "Selected Projects",
   description = "From heritage hotels in Jaisalmer to corporate campuses in Gurgaon — each project is a testament to craft that outlasts trends. Residential, hospitality, commercial, and export work across 18+ states.",
   items = furnitureProjects,
 }: Gallery4Props) => {
@@ -105,7 +105,7 @@ const Gallery4 = ({
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="mb-8 md:mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-0">
           <div className="flex flex-col gap-2">
-            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#88734C]">Portfolio</span>
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#88734C]">Our Work</span>
             <h2 className="text-3xl md:text-4xl font-semibold text-[#202e44]">{title}</h2>
             <p className="text-base text-[#202e44]/70 leading-relaxed max-w-xl mt-1">{description}</p>
           </div>

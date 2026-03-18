@@ -163,7 +163,7 @@ export function PremiumContact() {
           </motion.div>
 
           <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 tracking-tight" variants={fadeInUp}>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">Let's Build</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">Your Home.</span>
             <br />
             <motion.span
               className="bg-clip-text text-transparent bg-gradient-to-r from-[#c4a97a] via-[#e8d5a8] to-[#c4a97a]"
@@ -171,12 +171,12 @@ export function PremiumContact() {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               style={{ backgroundSize: '200% 200%' }}
             >
-              Your Dream Space
+              Our Craft.
             </motion.span>
           </motion.h2>
 
           <motion.p className="text-base text-white/60 max-w-2xl mx-auto leading-relaxed" variants={fadeInUp}>
-            Tell us about your furniture requirements and our expert team will reach out to help you create the perfect space.
+            Describe what you need and we'll respond within 4 hours — no middlemen, no obligation, just honest craft advice direct from our workshop in Sojat Road.
           </motion.p>
         </motion.div>
 
@@ -349,7 +349,7 @@ export function PremiumContact() {
             >
               <h4 className="text-lg font-semibold text-white mb-3">Quick Response Guarantee</h4>
               <p className="text-white/80 text-sm leading-relaxed">
-                At Maa Ashapura Furniture, we value your time. All inquiries receive a response within 4 hours during business hours. We'll schedule a free consultation to understand your requirements and provide a custom quote within 24 hours.
+                Every inquiry gets a real response within 4 hours — no bots, no runaround. We follow up with a free consultation and a custom quote within 24 hours.
               </p>
             </motion.div>
           </motion.div>
